@@ -33,7 +33,7 @@ The training hyperparameters used are:
 
 ![image](https://user-images.githubusercontent.com/46076665/109899849-749dbb00-7c64-11eb-81dd-698eb7235a5f.png)
 
-The task was solved in 180 episodes
+The task was solved in 180 episodes i.e. the agent is able to receive an average reward (over 100 episodes, and over all 20 agents) of at least +30 within 180 episodes.
 
 ## Future ideas for improving the agent's performance
 - Try a different algorithm such as the A3C or D4PG
