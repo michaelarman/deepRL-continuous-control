@@ -20,7 +20,7 @@ The observation space consists of 33 variables corresponding to position, rotati
 
 This Unity environment contains 20 identical agents, each with its own copy of the environment.  
 
-The second version is useful for algorithms like [PPO](https://arxiv.org/pdf/1707.06347.pdf), [A3C](https://arxiv.org/pdf/1602.01783.pdf), and [D4PG](https://openreview.net/pdf?id=SyZipzbCb) that use multiple (non-interacting, parallel) copies of the same agent to distribute the task of gathering experience.  
+This version is useful for algorithms like [PPO](https://arxiv.org/pdf/1707.06347.pdf), [A3C](https://arxiv.org/pdf/1602.01783.pdf), and [D4PG](https://openreview.net/pdf?id=SyZipzbCb) that use multiple (non-interacting, parallel) copies of the same agent to distribute the task of gathering experience.  
 
 #### Solving the Task
 
@@ -34,12 +34,19 @@ The environment is considered solved, when the average (over 100 episodes) of th
 
 1. Download the environment from one of the links below.  You need only select the environment that matches your operating system:
 
-    - **_Version 2: Twenty (20) Agents_**
+    - **_Twenty (20) Agents_**
         - Linux: [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P2/Reacher/Reacher_Linux.zip)
         - Mac OSX: [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P2/Reacher/Reacher.app.zip)
         - Windows (32-bit): [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P2/Reacher/Reacher_Windows_x86.zip)
         - Windows (64-bit): [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P2/Reacher/Reacher_Windows_x86_64.zip)
-    
+
+2. Install the required packages with `pip install -r requirements.txt`
+
+### Instructions
+
+The training and deployment of the agent is done in `Navigation.ipynb` 
+
+The model of the agent is in `deep_rl/agent/PPO_agent.py`
 ### References
 [1] Proximal Policy Optimization Algorithms, https://arxiv.org/abs/1707.06347
 
