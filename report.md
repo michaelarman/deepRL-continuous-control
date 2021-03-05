@@ -8,11 +8,17 @@ and overall strikes a favorable balance between sample complexity, simplicity, a
 
 In this project there are 20 agents and so the PPO is able to use multiple (non-interacting, parallel) copies of the same agent to distribute the task of gathering experience.
 
-The Network used in this project has the following configuration:
+The Network Architecture used in this project has the following configuration:
 
-- A Gaussian Actor Critic Network:  which consists of the input layer being the size of the state dimension, and output of the action dimension
-- The actor consists of a Fully Connected body with input size state dimension, and tanh activation,
-    critic consists of the same; Fully Connected body with input size state dimension, and tanh activation
+- A Gaussian Actor Critic Network:  which consists of 2 networks: the actor network and the critic network.
+- the input layers of the two networks are linear layers with an input size of 33 (state dimension), and output of 64
+- the second layer of both networks has an input size of 64 and output of 64
+- the output layer of the action network has 64 inputs and 4 outputs (action dimension)
+- the output layer of the critic network has 64 inputs and 1 output
+- Both the actor and the critic networks use tanh activations
+    
+    ![image](https://user-images.githubusercontent.com/46076665/110048960-e1758b80-7d1e-11eb-9b95-79b70d2f30a9.png)
+
 
 The training hyperparameters used are:
 - optimizer function: Adam(3e-4, eps=1e-5)
